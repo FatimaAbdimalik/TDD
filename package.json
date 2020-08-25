@@ -1,0 +1,19 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "Codewars Challenges",
+  "main": "tdd.js",
+  "dependencies": {
+    "jason": "^2.0.0",
+    "jason-test": "^1.4.0",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Fatima ABDIMALIK",
+  "license": "ISC"
+}
