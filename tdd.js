@@ -56,7 +56,45 @@ function rowWeights(array) {
 
   return [teamOneCount, teamTwoCount];
 }
+function pigLatin(str) {
+  let final = [];
+  let punctions;
+  let newWord;
+  const reverseWord = (word) => {
+    let wordArray = word.split("");
+    if (wordArray.includes("!")) {
+      punctions = word.match(/[!]/g);
+      newWord = word.replace(/[!]/g, "").split("");
+      let firstLetter = wordArray.shift().concat("ay");
+      let noFirstLetter = newWord.shift();
+      return newWord.concat(firstLetter).concat(punctions).join("");
+    } else {
+      let firstLetter = wordArray.shift().concat("ay");
+      return wordArray.concat(firstLetter).join("");
+    }
+  };
 
+  let string = str.split(" ");
+  for (let i = 0; i < string.length; i++) {
+    let changed = reverseWord(string[i]);
+    final.push(changed);
+  }
+
+  return final.join(" ");
+}
+
+function mexicanWave(str) {
+  let final = [];
+  for (let i = 0; i < str.length; i++) {
+    let stringToArray = str.split("");
+    if (str[i] !== " ") {
+      let letter = stringToArray[i].toUpperCase();
+      let word = stringToArray.splice(i, 1, letter);
+      final.push(stringToArray.join(""));
+    }
+  }
+  return final;
+}
 function orderedCountOfCharacters() {}
 
 module.exports = {
@@ -68,4 +106,6 @@ module.exports = {
   singles,
   orderedCountOfCharacters,
   rowWeights,
+  pigLatin,
+  mexicanWave,
 };

@@ -7,6 +7,8 @@ const {
   orderedCountOfCharacters,
   singles,
   rowWeights,
+  pigLatin,
+  mexicanWave,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -141,5 +143,45 @@ describe("rowWeights", () => {
     expect(rowWeights([100, 51, 50, 100])).toEqual([150, 151]);
     expect(rowWeights([39, 84, 74, 18, 59, 72, 35, 61])).toEqual([207, 235]);
     expect(rowWeights([0, 1, 0])).toEqual([0, 1]);
+  });
+});
+describe("pigLatin", () => {
+  test("returns the string as pig latin", () => {
+    expect(pigLatin("Pig latin is cool")).toBe("igPay atinlay siay oolcay");
+    expect(pigLatin("This is my string")).toBe("hisTay siay ymay tringsay");
+  });
+  test("ignores punctuation marks", () => {
+    expect(pigLatin("Pig latin is cool!!")).toBe("igPay atinlay siay oolcay!!");
+  });
+});
+describe("mexicanWave", () => {
+  test("returns a mexican wave", () => {
+    expect(mexicanWave("")).toEqual([]);
+    expect(mexicanWave("hello")).toEqual([
+      "Hello",
+      "hEllo",
+      "heLlo",
+      "helLo",
+      "hellO",
+    ]);
+    expect(mexicanWave("coding")).toEqual([
+      "Coding",
+      "cOding",
+      "coDing",
+      "codIng",
+      "codiNg",
+      "codinG",
+    ]);
+    expect(mexicanWave("two words")).toEqual([
+      "Two words",
+      "tWo words",
+      "twO words",
+      "two Words",
+      "two wOrds",
+      "two woRds",
+      "two worDs",
+      "two wordS",
+    ]);
+    expect(mexicanWave(" gap ")).toEqual([" Gap ", " gAp ", " gaP "]);
   });
 });
