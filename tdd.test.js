@@ -5,6 +5,7 @@ const {
   longestVowelChain,
   isIsogram,
   orderedCountOfCharacters,
+  singles,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -112,5 +113,18 @@ describe("return true if a string has no repeating letters", () => {
     expect(() => {
       isIsogram("");
     }).toThrow("string is needed");
+  });
+});
+describe("singles", () => {
+  test("returns the sum of single values only", () => {
+    expect(singles([4, 5, 7, 5, 4, 8])).toEqual(15);
+    expect(singles([9, 10, 19, 13, 19, 13])).toEqual(19);
+    expect(singles([16, 0, 11, 4, 8, 16, 0, 11])).toEqual(12);
+    expect(singles([5, 17, 18, 11, 13, 18, 11, 13])).toEqual(22);
+    expect(singles([5, 10, 19, 13, 10, 13])).toEqual(24);
+  });
+
+  test("returns 0 if no singles are provided", () => {
+    expect(singles([6, 6, 8, 8])).toEqual(0);
   });
 });

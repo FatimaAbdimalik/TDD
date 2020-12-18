@@ -34,12 +34,22 @@ function isIsogram(str) {
   if (!str) throw new Error("string is needed");
   return [...new Set(str.toLowerCase())].join("") === str.toLowerCase();
 }
+
+function singles(arr) {
+  let singleValues = arr.filter(
+    (num) => arr.indexOf(num) === arr.lastIndexOf(num)
+  );
+
+  return !singleValues.length ? 0 : singleValues.reduce((a, b) => a + b);
+}
 function orderedCountOfCharacters() {}
+
 module.exports = {
   removeDuplicateWords,
   filterTheNumber,
   occurrencesInAnArray,
   longestVowelChain,
   isIsogram,
+  singles,
   orderedCountOfCharacters,
 };
