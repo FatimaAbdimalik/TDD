@@ -42,6 +42,21 @@ function singles(arr) {
 
   return !singleValues.length ? 0 : singleValues.reduce((a, b) => a + b);
 }
+function rowWeights(array) {
+  let teamOneCount = 0;
+  let teamTwoCount = 0;
+
+  array.forEach((num, i) => {
+    if (i % 2 === 0) {
+      teamOneCount += num;
+    } else {
+      teamTwoCount += num;
+    }
+  });
+
+  return [teamOneCount, teamTwoCount];
+}
+
 function orderedCountOfCharacters() {}
 
 module.exports = {
@@ -52,4 +67,5 @@ module.exports = {
   isIsogram,
   singles,
   orderedCountOfCharacters,
+  rowWeights,
 };
