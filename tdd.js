@@ -95,7 +95,8 @@ function mexicanWave(str) {
   }
   return final;
 }
-function orderedCountOfCharacters() {}
+
+// function orderedCountOfCharacters() {}
 
 module.exports = {
   removeDuplicateWords,
