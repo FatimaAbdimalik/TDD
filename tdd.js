@@ -96,6 +96,11 @@ function mexicanWave(str) {
   return final;
 }
 
+function prime(n) {
+  let r = [2];
+  for (let i = 3; i <= n; i++) if (r.every((x) => i % x)) r.push(i);
+  return n > 1 ? r : [];
+}
 // function orderedCountOfCharacters() {}
 
 module.exports = {
@@ -105,8 +110,9 @@ module.exports = {
   longestVowelChain,
   isIsogram,
   singles,
-  orderedCountOfCharacters,
+  // orderedCountOfCharacters,
   rowWeights,
   pigLatin,
   mexicanWave,
+  prime,
 };

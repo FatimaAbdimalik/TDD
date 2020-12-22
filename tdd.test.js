@@ -9,6 +9,7 @@ const {
   rowWeights,
   pigLatin,
   mexicanWave,
+  prime,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -183,5 +184,12 @@ describe("mexicanWave", () => {
       "two wordS",
     ]);
     expect(mexicanWave(" gap ")).toEqual([" Gap ", " gAp ", " gaP "]);
+  });
+});
+
+describe("prime", () => {
+  test("return all prime numbers", () => {
+    expect(prime(0)).toEqual([]);
+    expect(prime(11)).toEqual([2, 3, 5, 7, 11]);
   });
 });
