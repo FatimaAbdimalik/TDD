@@ -103,6 +103,33 @@ function prime(n) {
 }
 // function orderedCountOfCharacters() {}
 
+function replace(str, before, after) {
+  // let arrayOfWords = str.split(" ");
+  // let afterArray = after.split("");
+  // let afterCapital = after[0].toUpperCase() + afterArray.slice(1).join("");
+  // let afterLower = after[0].toLowerCase() + afterArray.slice(1).join("");
+  // let wordCapital =
+  //   before[0] === before[0].toUpperCase() ? afterCapital : afterLower;
+  // for (let i = 0; i < arrayOfWords.length; i++) {
+  //   if (arrayOfWords[i] === before) {
+  //     arrayOfWords.splice(i, 1, wordCapital);
+  //   }
+  // }
+
+  // return `${arrayOfWords.join(" ")}`;
+
+  // find the index of before word!
+  let index = str.indexOf(before);
+
+  if (before[0] === before[0].toUpperCase()) {
+    after = after[0].toUpperCase() + after.slice(1);
+  } else {
+    after = after[0].toLowerCase() + after.slice(1);
+  }
+
+  return str.replace(before, after);
+}
+
 module.exports = {
   removeDuplicateWords,
   filterTheNumber,
@@ -115,4 +142,5 @@ module.exports = {
   pigLatin,
   mexicanWave,
   prime,
+  replace,
 };

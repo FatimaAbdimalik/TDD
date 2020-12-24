@@ -10,6 +10,7 @@ const {
   pigLatin,
   mexicanWave,
   prime,
+  replace,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -191,5 +192,21 @@ describe("prime", () => {
   test("return all prime numbers", () => {
     expect(prime(0)).toEqual([]);
     expect(prime(11)).toEqual([2, 3, 5, 7, 11]);
+  });
+});
+
+describe("replace", () => {
+  test("return a sentence after replacing the given word", () => {
+    expect(replace("Let us go to the store", "store", "mall")).toBe(
+      "Let us go to the mall"
+    );
+    expect(replace("He is Sleeping on the couch", "Sleeping", "sitting")).toBe(
+      "He is Sitting on the couch"
+    );
+  });
+  test("return a sentence after replacing the given word", () => {
+    expect(replace("I think we should look up there", "up", "Down")).toBe(
+      "I think we should look down there"
+    );
   });
 });
