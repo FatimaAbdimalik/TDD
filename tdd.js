@@ -130,6 +130,12 @@ function replace(str, before, after) {
   return str.replace(before, after);
 }
 
+function pairElement(str) {
+  let obj = { A: "T", T: "A", C: "G", G: "C" };
+  let arr = str.split("");
+  return arr.map((p) => [p, obj[p]]);
+}
+
 module.exports = {
   removeDuplicateWords,
   filterTheNumber,
@@ -143,4 +149,5 @@ module.exports = {
   mexicanWave,
   prime,
   replace,
+  pairElement,
 };

@@ -11,6 +11,7 @@ const {
   mexicanWave,
   prime,
   replace,
+  pairElement,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -209,4 +210,14 @@ describe("replace", () => {
       "I think we should look down there"
     );
   });
+});
+
+describe("return an array of paired DNA elements", () => {
+  expect(pairElement("ATCGA")).toEqual([
+    ["A", "T"],
+    ["T", "A"],
+    ["C", "G"],
+    ["G", "C"],
+    ["A", "T"],
+  ]);
 });
