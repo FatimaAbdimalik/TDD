@@ -12,6 +12,7 @@ const {
   prime,
   replace,
   pairElement,
+  uniteUnique,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -220,4 +221,16 @@ describe("return an array of paired DNA elements", () => {
     ["G", "C"],
     ["A", "T"],
   ]);
+});
+
+describe("returns a new array of unique values in the order of the original provided arrays", () => {
+  test("returns a new array of unique values", () => {
+    expect(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])).toEqual([
+      1,
+      3,
+      2,
+      5,
+      4,
+    ]);
+  });
 });

@@ -136,6 +136,16 @@ function pairElement(str) {
   return arr.map((p) => [p, obj[p]]);
 }
 
+function uniteUnique(arr) {
+  let final = [];
+  for (let i = 0; i < arguments.length; i++) {
+    for (let j = 0; j < arguments[i].length; j++) {
+      final.push(arguments[i][j]);
+    }
+  }
+  return [...new Set(final)];
+}
+
 module.exports = {
   removeDuplicateWords,
   filterTheNumber,
@@ -150,4 +160,5 @@ module.exports = {
   prime,
   replace,
   pairElement,
+  uniteUnique,
 };
