@@ -249,4 +249,7 @@ describe("return the original string plus ay", () => {
   test("return null if there is string has has any non-alpha characters", () => {
     expect(simplePigLatin("tes3t5")).toBe(null);
   });
+  test("return lowercase, regardless of the case of the input", () => {
+    expect(simplePigLatin("Hello")).toBe("ellohay");
+  });
 });
