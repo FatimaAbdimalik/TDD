@@ -164,6 +164,12 @@ const simplePigLatin = (string) => {
 
   if (vowelIndex === 0) {
     return string + "way";
+  } else {
+    let subStringWithVowel = str.substring(0, vowelIndex);
+    console.log(subStringWithVowel);
+    let restOfWord = str.substring(vowelIndex, str.length);
+    console.log(restOfWord);
+    return restOfWord + subStringWithVowel + "ay";
   }
 };
 module.exports = {

@@ -241,6 +241,6 @@ describe("return the original string plus ay", () => {
     expect(simplePigLatin("egg")).toBe("eggway");
   });
   test("return the original string plus ay if string starts with a consonant", () => {
-    expect("map").toBe("apmay");
+    expect(simplePigLatin("map")).toBe("apmay");
   });
 });
