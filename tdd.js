@@ -145,7 +145,27 @@ function uniteUnique(arr) {
   }
   return [...new Set(final)];
 }
+const simplePigLatin = (string) => {
+  let vowelRegex = /[aeiouAEIOU]/;
+  let str = string.toLowerCase();
+  const arrayOfWords = str.split("");
+  for (let i = 0; i < arrayOfWords.length; i++) {
+    if (
+      arrayOfWords[i] === "a" ||
+      arrayOfWords[i] === "o" ||
+      arrayOfWords[i] === "e" ||
+      arrayOfWords[i] === "i" ||
+      arrayOfWords[i] === "u"
+    ) {
+      vowelIndex = arrayOfWords.indexOf(arrayOfWords[i]);
+      break;
+    }
+  }
 
+  if (vowelIndex === 0) {
+    return string + "way";
+  }
+};
 module.exports = {
   removeDuplicateWords,
   filterTheNumber,
@@ -161,4 +181,5 @@ module.exports = {
   replace,
   pairElement,
   uniteUnique,
+  simplePigLatin,
 };

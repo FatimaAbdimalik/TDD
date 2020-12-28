@@ -13,6 +13,7 @@ const {
   replace,
   pairElement,
   uniteUnique,
+  simplePigLatin,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -232,5 +233,11 @@ describe("returns a new array of unique values in the order of the original prov
       5,
       4,
     ]);
+  });
+});
+
+describe("return the original string plus ay", () => {
+  test("return the original string plus way if string starts with a vowel", () => {
+    expect(simplePigLatin("egg")).toBe("eggway");
   });
 });
