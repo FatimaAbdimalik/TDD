@@ -147,6 +147,10 @@ function uniteUnique(arr) {
 }
 const simplePigLatin = (string) => {
   let vowelRegex = /[aeiouAEIOU]/;
+  let regex = /[^a-z-A-Z]/;
+  if (regex.test(string)) {
+    return null;
+  }
   let str = string.toLowerCase();
   const arrayOfWords = str.split("");
   for (let i = 0; i < arrayOfWords.length; i++) {

@@ -243,4 +243,10 @@ describe("return the original string plus ay", () => {
   test("return the original string plus ay if string starts with a consonant", () => {
     expect(simplePigLatin("map")).toBe("apmay");
   });
+  test("return the original string plus ay if there is no vowel", () => {
+    expect(simplePigLatin("cccc")).toBe("ccccay");
+  });
+  test("return null if there is string has has any non-alpha characters", () => {
+    expect(simplePigLatin("tes3t5")).toBe(null);
+  });
 });
