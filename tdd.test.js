@@ -240,4 +240,7 @@ describe("return the original string plus ay", () => {
   test("return the original string plus way if string starts with a vowel", () => {
     expect(simplePigLatin("egg")).toBe("eggway");
   });
+  test("return the original string plus ay if string starts with a consonant", () => {
+    expect("map").toBe("apmay");
+  });
 });
