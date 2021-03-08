@@ -174,6 +174,22 @@ const simplePigLatin = (string) => {
     return restOfWord + subStringWithVowel + "ay";
   }
 };
+
+const charCodeCalculation = (x) => {
+  let splitX = x.split("");
+  // used map, passed two arguments, use index to convert letter to digit.
+  let total1 = splitX.map((n, i) => x.charCodeAt(i)).join("");
+  let total2 = total1.replace(/7/g, "1");
+  let total1Converted = total1
+    .split("")
+    .map((p) => Number(p))
+    .reduce((a, b) => a + b);
+  let total2Converted = total2
+    .split("")
+    .map((p) => Number(p))
+    .reduce((a, b) => a + b);
+  return total1Converted - total2Converted;
+};
 module.exports = {
   removeDuplicateWords,
   filterTheNumber,
@@ -190,4 +206,5 @@ module.exports = {
   pairElement,
   uniteUnique,
   simplePigLatin,
+  charCodeCalculation,
 };
