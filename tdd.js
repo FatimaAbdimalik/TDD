@@ -177,7 +177,6 @@ const simplePigLatin = (string) => {
 
 const charCodeCalculation = (x) => {
   let splitX = x.split("");
-  // used map, passed two arguments, use index to convert letter to digit.
   let total1 = splitX.map((n, i) => x.charCodeAt(i)).join("");
   let total2 = total1.replace(/7/g, "1");
   let total1Converted = total1
