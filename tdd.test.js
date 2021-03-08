@@ -259,4 +259,14 @@ describe("return the difference between the sum of the digits", () => {
   test("return the difference between the sum of the digits", () => {
     expect(charCodeCalculation("ABC")).toBe(6);
   });
+  test("return the difference between the sum of the digits", () => {
+    expect(charCodeCalculation("aaaaaddddr")).toBe(30);
+  });
+  test("return the difference between the sum of the digits", () => {
+    expect(
+      charCodeCalculation(
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      )
+    ).toBe(96);
+  });
 });
