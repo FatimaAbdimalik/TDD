@@ -14,6 +14,7 @@ const {
   pairElement,
   uniteUnique,
   simplePigLatin,
+  charCodeCalculation,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -251,5 +252,11 @@ describe("return the original string plus ay", () => {
   });
   test("return lowercase, regardless of the case of the input", () => {
     expect(simplePigLatin("Hello")).toBe("ellohay");
+  });
+});
+
+describe("return the difference between the sum of the digits", () => {
+  test("return the difference between the sum of the digits", () => {
+    expect(charCodeCalculation("ABC")).toBe(6);
   });
 });
