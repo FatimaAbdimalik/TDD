@@ -15,6 +15,7 @@ const {
   uniteUnique,
   simplePigLatin,
   charCodeCalculation,
+  roman,
 } = require("./tdd.js");
 describe("remove duplicate words", () => {
   test("should remove all duplicate wrods in the string", () => {
@@ -268,5 +269,11 @@ describe("return the difference between the sum of the digits", () => {
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
       )
     ).toBe(96);
+  });
+});
+
+describe("convert Roman numeral to numeric decimal integer", () => {
+  test("convert Roman numeral to numeric decimal integer", () => {
+    expect(roman("XXI")).toBe(21);
   });
 });
