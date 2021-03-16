@@ -275,5 +275,7 @@ describe("return the difference between the sum of the digits", () => {
 describe("convert Roman numeral to numeric decimal integer", () => {
   test("convert Roman numeral to numeric decimal integer", () => {
     expect(roman("XXI")).toBe(21);
+    expect(roman("MMVIII")).toBe(2008);
+    expect(roman("MDCLXVI")).toBe(1666);
   });
 });
