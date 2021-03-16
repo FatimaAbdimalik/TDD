@@ -200,7 +200,10 @@ const roman = (str) => {
     M: 1000,
   };
 
-  // return str.split("").map((p)=>).reduce(())
+  return str
+    .split("")
+    .map((p) => romanNumbers[p])
+    .reduce((a, b) => a + b);
 };
 module.exports = {
   removeDuplicateWords,
