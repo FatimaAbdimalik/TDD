@@ -189,6 +189,19 @@ const charCodeCalculation = (x) => {
     .reduce((a, b) => a + b);
   return total1Converted - total2Converted;
 };
+const roman = (str) => {
+  let romanNumbers = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
+  // return str.split("").map((p)=>).reduce(())
+};
 module.exports = {
   removeDuplicateWords,
   filterTheNumber,
@@ -206,4 +219,5 @@ module.exports = {
   uniteUnique,
   simplePigLatin,
   charCodeCalculation,
+  roman,
 };
